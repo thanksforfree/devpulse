@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 // No web fonts: the UI uses the Apple system stack (-apple-system renders SF Pro
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </defs>
         </svg>
         {children}
+        <Analytics />
       </body>
     </html>
   );
